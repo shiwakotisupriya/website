@@ -1,15 +1,12 @@
 html, body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     width: 100%; /* Ensure the width is always 100% of the viewport */
-}
-body {
-    font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
     line-height: 1.6;
     background-color: #000;
     color: #fffefe;
-    overflow-x: hidden;
 }
 
 .navbar {
@@ -38,7 +35,7 @@ body {
 }
 
 .navbar ul li a:hover {
-    color:  rgb(110, 111, 110);
+    color: rgb(110, 111, 110);
 }
 
 header {
@@ -95,7 +92,7 @@ section:hover {
 
 h2 {
     margin-top: 0;
-    color:  rgb(110, 111, 110);;
+    color: rgb(110, 111, 110);
     font-size: 1.8rem;
     text-align: center;
 }
@@ -128,169 +125,156 @@ footer p {
 }
 
 .social-links a {
-    color:  rgb(151, 152, 151);;
+    color: rgb(151, 152, 151);
     text-decoration: none;
     margin: 0 0.5rem;
     transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-    color:  rgb(188, 192, 188);;
+    color: rgb(188, 192, 188);
 }
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .profile-photo {
-        margin-bottom: 1rem;
-    }
-
-    .profile-info h1 {
-        font-size: 1.8rem;
-    }
-
-    .profile-info p {
-        font-size: 0.9rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    section {
-        padding: 1.5rem;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-    }
-
-    .navbar ul li {
-        margin: 0.5rem 0;
-    }
-}
-.skill{
+.skill {
     color: white;
 }
-.bar{
-    background-color: rgb(55, 53, 53,0.5);
+
+.bar {
+    background-color: rgb(55, 53, 53, 0.5);
     width: 600px;
     height: 15px;
     border-radius: 50px;
+    margin: 1rem auto; /* Center the bars */
+    position: relative; /* For absolute positioning of percentage circles */
 }
-.bar div{
+
+.bar div {
     width: 0%;
     height: 15px;
     border-radius: 50px;
-    /* background-color: rgb(249, 8, 8); */
 }
-.bar div span{
+
+.bar div span {
     height: 30px;
     width: 30px;
-    border-radius: 70%;
+    border-radius: 50%;
     background-color: rgb(76, 2, 2);
-    float: right;
-    margin-top: -8px;
-    margin-right: -20px;
+    position: absolute; /* Use absolute positioning for better control */
+    right: -15px;
+    top: -7px; /* Adjust this value to vertically center the circle */
     color: rgb(255, 247, 247);
     font-size: 10px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
     border: solid white;
 }
-.html{
+
+.html {
     background-color: rgb(82, 83, 83);
     animation: html 1s linear forwards;
 }
-@keyframes html {
-    100%{
-        width: 80%;
-    }
-}
-.css{
+
+.css {
     background-color: rgb(82, 83, 83);
     animation: css 1s linear forwards;
+}
 
-}
-@keyframes css {
-    100%{
-        width: 60%;
-    }
-}
-.js{
-    background-color:rgb(82, 83, 83);
+.js {
+    background-color: rgb(82, 83, 83);
     animation: js 1s linear forwards;
 }
-@keyframes js {
-    100%{
-        width: 60%;
-    }
-}
-.java{
+
+.java {
     background-color: rgb(82, 83, 83);
     animation: java 1s linear forwards;
 }
-@keyframes java {
-    100%{
-        width: 55%;
-    }
-}
-.database{
+
+.database {
     background-color: rgb(82, 83, 83);
     animation: database 1s linear forwards;
 }
-@keyframes database {
-    100%{
-        width: 60%;
-    }
-}
-.php{
-    background-color:rgb(82, 83, 83);
+
+.php {
+    background-color: rgb(82, 83, 83);
     animation: php 1s linear forwards;
 }
-@keyframes php {
-    100%{
-        width: 60%;
-    }
-}
-.python{
+
+.python {
     background-color: rgb(82, 83, 83);
     animation: python 1s linear forwards;
 }
-@keyframes python {
-    100%{
-        width: 50%;
-    }
-}
-.c{
+
+.c {
     background-color: rgb(82, 83, 83);
     animation: c 1s linear forwards;
 }
+
+@keyframes html {
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes css {
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes js {
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes java {
+    100% {
+        width: 55%;
+    }
+}
+
+@keyframes database {
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes php {
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes python {
+    100% {
+        width: 50%;
+    }
+}
+
 @keyframes c {
-    100%{
+    100% {
         width: 40%;
     }
 }
 
-.right{
+.right {
     width: 40%;
     margin-left: 50%;
     margin-top: -15%;
 }
-.left{
+
+.left {
     margin-left: 3%;
     width: 28%;
     margin-top: 10%;
     font-size: 1.8rem;
 }
-a{
+
+a {
     color: rgb(248, 252, 252);
 }
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -348,46 +332,5 @@ a{
 
     .profile-info p {
         font-size: 1rem;
-    }
-}
-
-@keyframes html {
-    100%{
-        width: 80%;
-    }
-}
-@keyframes css {
-    100%{
-        width: 60%;
-    }
-}
-@keyframes js {
-    100%{
-        width: 60%;
-    }
-}
-@keyframes java {
-    100%{
-        width: 55%;
-    }
-}
-@keyframes database {
-    100%{
-        width: 60%;
-    }
-}
-@keyframes php {
-    100%{
-        width: 60%;
-    }
-}
-@keyframes python {
-    100%{
-        width: 50%;
-    }
-}
-@keyframes c {
-    100%{
-        width: 40%;
     }
 }
