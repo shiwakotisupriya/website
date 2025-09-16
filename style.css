@@ -15,30 +15,71 @@ body {
 .navbar {
     background: #06060600;
     padding: 1rem;
-    text-align: center;
+    position: relative;
 }
 
-.navbar ul {
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    position: absolute;
+    right: -163px;
+    z-index: 1001;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: #fffefe;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.hamburger.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.nav-menu {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
+    transition: all 0.3s ease;
 }
 
-.navbar ul li {
+.nav-menu li {
     margin: 0 1rem;
 }
 
-.navbar ul li a {
+.nav-menu li a {
     color: #fffefe;
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
-.navbar ul li a:hover {
-    color:  rgb(110, 111, 110);
+.nav-menu li a:hover {
+    color: rgb(110, 111, 110);
 }
 
 header {
@@ -138,7 +179,201 @@ footer p {
     color:  rgb(188, 192, 188);;
 }
 
+/* About section layout */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: start;
+}
+
+/* Resume Download Button Styles */
+.resume-download {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+.download-btn:active {
+    transform: translateY(0);
+}
+
+.download-icon {
+    font-size: 1.2rem;
+}
+
+/* Education & Certifications Combined Section */
+.education-certifications-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.education-section, .certifications-section {
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid rgb(110, 111, 110);
+}
+
+.education-section h3, .certifications-section h3 {
+    color: rgb(110, 111, 110);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    text-align: left;
+}
+
+.education-section ul, .certifications-section ul {
+    margin: 0;
+}
+
+.education-section li, .certifications-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Back to Top Button Styles */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+.back-to-top:active {
+    transform: translateY(-1px);
+}
+
+.arrow-up {
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* Base styles remain the same until media queries */
+
+/* Tablet styles (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    header {
+        padding: 1.5rem 2rem;
+    }
+    
+    .profile-info h1 {
+        font-size: 2.8rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+        margin: 0.8rem 0;
+    }
+    
+    .education-certifications-container {
+        gap: 1.5rem;
+    }
+    
+    .bar {
+        width: 80%;
+    }
+    
+    /* About section for tablet */
+    .about-content {
+        gap: 1.5rem;
+    }
+    
+    .left {
+        font-size: 1.6rem;
+    }
+    
+    .right {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile styles (768px and below) */
 @media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 1rem 0;
+    }
+
+    .nav-menu li a {
+        font-size: 1.1rem;
+        padding: 0.5rem 1rem;
+        display: block;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu li a:hover {
+        background: rgba(110, 111, 110, 0.1);
+        color: rgb(110, 111, 110);
+    }
+
     header {
         flex-direction: column;
         align-items: center;
@@ -147,6 +382,8 @@ footer p {
 
     .profile-photo {
         margin-bottom: 1rem;
+        width: 100px;
+        height: 100px;
     }
 
     .profile-info h1 {
@@ -165,22 +402,186 @@ footer p {
         padding: 1.5rem;
     }
 
-    .navbar ul {
-        flex-direction: column;
+
+
+    .bar {
+        width: 80%; /* Reduce the width of the skill bars */
+        margin: 0 auto; /* Center the bars */
     }
 
-    .navbar ul li {
-        margin: 0.5rem 0;
+    /* About section mobile layout */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .right {
+        grid-column: 1;
+        width: 100%;
+        order: 2;
+        text-align: left;
+        font-size: 0.95rem;
+    }
+
+    .left {
+        grid-column: 1;
+        width: 100%;
+        order: 1;
+        font-size: 1.4rem;
+        text-align: center;
+        padding: 1rem;
+        background: rgba(110, 111, 110, 0.1);
+        border-radius: 8px;
+        border-left: 4px solid rgb(110, 111, 110);
+    }
+
+    .profile-info p {
+        font-size: 1rem;
+    }
+
+    /* Mobile responsiveness for education & certifications */
+    .education-certifications-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .download-btn {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+
+    /* Back to Top Button Mobile Styles */
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
     }
 }
+
+/* Small mobile styles (480px and below) */
+@media (max-width: 480px) {
+    .navbar ul li a {
+        font-size: 1rem;
+    }
+    
+    .profile-info h1 {
+        font-size: 1.5rem;
+    }
+    
+    .profile-info p {
+        font-size: 0.8rem;
+    }
+    
+    section {
+        padding: 1rem;
+        margin: 0.5rem 0;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .left {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+    
+    .right {
+        font-size: 0.9rem;
+    }
+    
+    .bar {
+        width: 90%;
+        height: 12px;
+    }
+    
+    .bar div span {
+        width: 25px;
+        height: 25px;
+        font-size: 9px;
+        margin-top: -6px;
+    }
+    
+    .download-btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    footer {
+        padding: 1rem 0;
+    }
+    
+    .social-links {
+        font-size: 1rem;
+    }
+}
+
+/* Extra small devices (360px and below) */
+@media (max-width: 360px) {
+    .profile-photo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .profile-info h1 {
+        font-size: 1.3rem;
+    }
+    
+    .navbar ul li {
+        margin: 0.3rem 0;
+    }
+    
+    .navbar ul li a {
+        font-size: 0.9rem;
+    }
+    
+    section {
+        padding: 0.8rem;
+    }
+    
+    .download-btn {
+        padding: 6px 15px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Landscape orientation for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .profile-photo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .profile-info h1 {
+        font-size: 1.5rem;
+    }
+    
+    header {
+        padding: 1rem 2rem;
+    }
+}
+
 .skill{
     color: white;
 }
 .bar{
     background-color: rgb(55, 53, 53,0.5);
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     height: 15px;
     border-radius: 50px;
+    margin: 0.5rem 0;
 }
 .bar div{
     width: 0%;
@@ -219,7 +620,7 @@ footer p {
 }
 @keyframes css {
     100%{
-        width: 60%;
+        width: 70%;
     }
 }
 .js{
@@ -228,7 +629,7 @@ footer p {
 }
 @keyframes js {
     100%{
-        width: 60%;
+        width: 80%;
     }
 }
 .java{
@@ -237,7 +638,7 @@ footer p {
 }
 @keyframes java {
     100%{
-        width: 55%;
+        width: 60%;
     }
 }
 .database{
@@ -246,7 +647,7 @@ footer p {
 }
 @keyframes database {
     100%{
-        width: 60%;
+        width: 70%;
     }
 }
 .php{
@@ -255,7 +656,7 @@ footer p {
 }
 @keyframes php {
     100%{
-        width: 60%;
+        width: 80%;
     }
 }
 .python{
@@ -264,7 +665,7 @@ footer p {
 }
 @keyframes python {
     100%{
-        width: 50%;
+        width: 70%;
     }
 }
 .c{
@@ -278,77 +679,27 @@ footer p {
 }
 
 .right{
-    width: 40%;
-    margin-left: 50%;
-    margin-top: -15%;
+    width: 98%;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
 }
+
 .left{
-    margin-left: 3%;
-    width: 28%;
-    margin-top: 10%;
+    grid-column: 1;
+    width: 95%;
+    margin: 0;
     font-size: 1.8rem;
+    font-weight: 300;
+    font-style: italic;
+    color: rgb(110, 111, 110);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 a{
     color: rgb(248, 252, 252);
-}
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .profile-photo {
-        margin-bottom: 1rem;
-        width: 100px;
-        height: 100px;
-    }
-
-    .profile-info h1 {
-        font-size: 1.8rem;
-    }
-
-    .profile-info p {
-        font-size: 0.9rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    section {
-        padding: 1.5rem;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-    }
-
-    .navbar ul li {
-        margin: 0.5rem 0;
-    }
-
-    .bar {
-        width: 80%; /* Reduce the width of the skill bars */
-        margin: 0 auto; /* Center the bars */
-    }
-
-    .right {
-        width: 90%; /* Increase width on smaller screens */
-        margin-left: 0; /* Align to center */
-        margin-top: 2rem; /* Add some top margin */
-    }
-
-    .left {
-        width: 90%; /* Increase width on smaller screens */
-        margin-left: 0; /* Align to center */
-        margin-top: 2rem; /* Add some top margin */
-        font-size: 1.3rem;
-    }
-
-    .profile-info p {
-        font-size: 1rem;
-    }
 }
 
 @keyframes html {
