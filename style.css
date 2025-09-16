@@ -32,8 +32,8 @@ body {
     border: none;
     cursor: pointer;
     padding: 0.5rem;
-    position: absolute;
-    right: -163px;
+    position: fixed;
+    right: 10px;
     z-index: 1001;
 }
 
