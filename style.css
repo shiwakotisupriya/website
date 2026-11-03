@@ -1170,3 +1170,7 @@ main { overflow-x: clip; }
   .membership-card h3 { font-size: 16px; }
   .section-label { font-size: 8px; letter-spacing: .8px; }
 }
+
+/* SVG controls inherit text colour and never render as platform emoji. */
+.icon { display: inline-block; width: 1em; height: 1em; flex-shrink: 0; vertical-align: -.125em; overflow: visible; }
+.button .icon, .inline-link .icon, .nav-contact .icon { width: 16px; height: 16px; }
