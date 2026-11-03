@@ -59,3 +59,7 @@ The rounded portrait sits inside revolving orbital rings. Its first entrance ass
 Dedicated ACS membership section. The original ACS logo was extracted from the supplied upgraded CV and retains its brand colours. Update images/acs-logo.png if replacing it with another approved logo.
 
 The portrait orbit uses matching front and rear WebGL layers clipped at the photo plane, so revolving arcs pass both in front of and behind the stationary photo.
+
+## Mobile layout
+
+Keeps the desktop theme, 3D orbital portrait, photo assembly, project entrances, and ACS section. Phone layouts stack content for readability; tablets retain the two-column project composition. Navigation scrolls within short screens, controls have touch-sized targets, long skill labels sit above headings, and orbital layers are sized to stay within the page.

@@ -1064,3 +1064,109 @@ summary span {
   .hero-orbit { inset: auto; left: 50%; top: 0; opacity: .85; }
   .portrait-tag { font-size: 11px; padding: 10px 14px; }
 }
+
+/* Responsive polish: preserve the desktop visual language on touch screens. */
+main { overflow-x: clip; }
+.hero-copy, .portrait-block, .project-card, .project-body,
+.about-grid > *, .journey-grid > *, .contact-grid > *,
+.skill-grid > *, .membership-grid > * { min-width: 0; }
+@media (max-width: 1024px) {
+  .section-heading { gap: 32px; }
+  .hero { gap: 36px; }
+  .membership-card { min-width: 0; }
+  .membership-card h3 { overflow-wrap: break-word; }
+}
+@media (max-width: 760px) {
+  html { scroll-padding-top: 92px; }
+  .wrap { width: calc(100% - 40px); }
+  .nav { min-height: 72px; }
+  .js .menu-toggle:not([hidden]) { min-height: 44px; min-width: 82px; justify-content: center; font-size: 13px; }
+  .nav-links { max-height: calc(100svh - 80px); overflow-y: auto; padding-bottom: 18px; }
+  .nav-links a { min-height: 44px; display: flex; align-items: center; padding: 10px 12px; border-radius: 8px; font-size: 14px; }
+  .nav-links a[aria-current] { background: var(--paper); }
+  .nav-contact { margin-top: 4px; }
+  .hero { padding-top: 40px; padding-bottom: 42px; gap: 82px; }
+  .hero-copy > .eyebrow { font-size: 9px; line-height: 1.7; letter-spacing: 1px; align-items: flex-start; }
+  .hero-copy .status-dot { margin-top: 5px; }
+  h1 { font-size: clamp(34px, 8.9vw, 54px); line-height: 1.14; letter-spacing: -1.6px; }
+  h1 em { letter-spacing: inherit; }
+  h2 { font-size: clamp(29px, 7vw, 39px); letter-spacing: -1px; }
+  .hero-intro { font-size: 19px; }
+  .hero-description { font-size: 14px; line-height: 1.85; max-width: 560px; }
+  .actions { gap: 12px; margin-block: 24px; }
+  .button { min-height: 46px; padding: 12px 17px; font-size: 12px; gap: 16px; }
+  .hero-note { gap: 8px; margin-top: 22px; }
+  .hero-note span { border: 1px solid var(--border); border-radius: 6px; padding: 4px 8px; font-size: 10px; }
+  .hero-note span + span::before { content: none; }
+  .portrait-block { width: 78%; max-width: 360px; margin: 0 auto 14px; }
+  .portrait-frame { padding: 8px 8px 0; border-radius: 80px 80px 6px 6px; }
+  .portrait-image { border-radius: 72px 72px 2px 2px; }
+  .hero-orbit { top: 0; opacity: .95; }
+  .portrait-tag { left: -12px; bottom: 8px; font-size: 11px; line-height: 1.5; padding: 9px 12px; border-radius: 8px; }
+  .portrait-block figcaption { width: 124%; margin-left: -12%; margin-top: 28px; gap: 8px; font-size: 7px; letter-spacing: .6px; }
+  .tiny-cross { font-size: 25px; }
+  .scene-toggle { min-width: 70px; min-height: 44px; padding: 6px 8px; font-size: 10px; }
+  .specialty-strip .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; font-size: 8px; text-align: center; padding-block: 22px; }
+  .specialty-strip span:nth-child(even) { display: none; }
+  .section { padding-block: 54px; }
+  .section-label { font-size: 9px; letter-spacing: 1.2px; gap: 16px; }
+  .section-label > span:first-child { flex-shrink: 0; }
+  .section-heading > p, .about-grid p, .journey-intro > p, .membership-grid > div > p { font-size: 14px; }
+  .facts strong { font-size: 15px; }
+  .facts span { font-size: 12px; }
+  .projects { gap: 22px; }
+  .project-body { padding: 22px; }
+  .project-body h3 { font-size: 21px; }
+  .project-body > p, .project-details { font-size: 13px; line-height: 1.8; }
+  .project-kicker { font-size: 8px; letter-spacing: 1px; gap: 12px; }
+  .project-kicker > span:first-child { max-width: calc(100% - 30px); }
+  .project-art, .wide-project .project-art { height: 230px; }
+  .art-label, .art-foot { font-size: 8px; letter-spacing: 1.1px; }
+  .tags { gap: 7px; margin-block: 18px; }
+  .tags li { font-size: 10px; padding: 4px 8px; }
+  summary { min-height: 48px; padding-block: 12px 4px; font-size: 12px; }
+  .work-note { font-size: 11px; }
+  .inline-link { min-height: 44px; font-size: 12px; gap: 20px; }
+  .timeline p, .timeline li { font-size: 13px; }
+  .timeline-date { font-size: 9px !important; letter-spacing: 1px; }
+  .timeline .organisation { font-size: 12px; }
+  .skill-grid article { padding-left: 0; padding-top: 20px; }
+  .skill-number { position: static; display: block; margin-bottom: 14px; font-size: 9px; letter-spacing: 1px; }
+  .skill-grid h3 { margin-bottom: 12px; font-size: 19px; }
+  .skill-grid p { font-size: 13px; line-height: 2; }
+  .learning .eyebrow { font-size: 9px; }
+  .learning p { font-size: 12px; line-height: 2; }
+  .membership-card { padding: 22px; gap: 18px; }
+  .membership-card .eyebrow { line-height: 1.6; }
+  .membership-card p:last-child { font-size: 13px; }
+  .contact h2 { font-size: clamp(34px, 8.4vw, 44px); }
+  .contact-grid > div > p:not(.eyebrow) { font-size: 14px; }
+  .contact-links a { min-height: 76px; }
+  .contact-links strong { font-size: 13px; }
+  .footer { gap: 16px; }
+  .footer > a:last-child { min-height: 44px; display: inline-flex; align-items: center; }
+}
+/* Tablet retains the desktop card composition; phone cards keep readable widths. */
+@media (min-width: 600px) and (max-width: 760px) {
+  .projects { grid-template-columns: 1fr 1fr; }
+  .wide-project { display: grid; grid-template-columns: 1fr 1fr; grid-column: 1 / -1; }
+  .wide-project .project-art { height: 100%; min-height: 300px; }
+  .project-body { padding: 20px; }
+  .project-body h3 { font-size: 19px; }
+  .hero-copy { max-width: 600px; }
+  .facts { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .facts div { border-bottom: 0; padding-bottom: 0; }
+}
+@media (max-width: 380px) {
+  .wrap { width: calc(100% - 32px); }
+  .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .button { padding-inline: 10px; gap: 9px; font-size: 11px; }
+  .portrait-tag { font-size: 10px; padding: 8px 10px; }
+  .portrait-block figcaption { flex-wrap: wrap; }
+  .scene-toggle { margin-left: auto; }
+  .membership-card { flex-direction: row; padding: 18px; gap: 14px; }
+  .membership-logo { width: 62px; min-width: 62px; height: 76px; padding: 8px; }
+  .membership-logo img { width: 46px; height: 60px; }
+  .membership-card h3 { font-size: 16px; }
+  .section-label { font-size: 8px; letter-spacing: .8px; }
+}
