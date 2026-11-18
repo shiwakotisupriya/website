@@ -1385,3 +1385,34 @@ main { overflow-x: clip; }
  .membership-compact h2 { font-size: 17px; }
  .membership-compact p { font-size: 12px; }
 }
+
+/* Olist is the flagship; supporting exploration takes less visual space. */
+.data-projects { grid-template-columns: 1fr; }
+.project-card.flagship-project { display: grid; grid-template-columns: .85fr 1.15fr; }
+.flagship-preview { height: 100%; min-height: 380px; padding: 36px; justify-content: center; gap: 10px; }
+.flagship-preview > strong { font-size: clamp(40px, 5vw, 66px); }
+.flagship-preview > span:first-child { font-size: 11px; }
+.flagship-preview-stats { display: grid; grid-template-columns: 1fr 1fr; width: 100%; gap: 20px; margin-block: 16px; padding-block: 20px; border-block: 1px solid var(--border); }
+.flagship-preview-stats b { display: block; font-size: 26px; font-weight: 500; line-height: 1.4; }
+.flagship-preview-stats span { font-size: 11px; color: var(--muted); }
+.flagship-project .project-body { padding: 36px; }
+.flagship-project .project-kicker { color: var(--accent); }
+.flagship-project .project-body h3 { font-size: clamp(24px, 2.7vw, 32px); letter-spacing: -.7px; }
+.project-body .flagship-takeaway { margin-top: 18px; font-size: 13px; color: var(--muted); }
+.flagship-takeaway strong { color: var(--ink); font-weight: 500; }
+.flagship-project .button { font-size: 13px; }
+.project-card.secondary-data-project { display: grid; grid-template-columns: 200px 1fr; }
+.secondary-data-project .project-art { height: 100%; min-height: 220px; }
+.secondary-data-project .project-body { padding: 26px 30px; }
+.secondary-data-project .project-body h3 { font-size: 22px; }
+.secondary-data-project .tags { margin-block: 14px; }
+@media (max-width: 760px) {
+ .project-card.flagship-project { grid-template-columns: 1fr; }
+ .flagship-preview { min-height: 0; padding: 28px; gap: 8px; }
+ .flagship-preview > strong { font-size: 48px; }
+ .flagship-preview-stats { margin-block: 12px; padding-block: 14px; }
+ .flagship-project .project-body { padding: 26px; }
+ .project-card.secondary-data-project { grid-template-columns: 1fr; }
+ .secondary-data-project .project-art { height: 160px; min-height: 0; }
+ .secondary-data-project .project-body { padding: 24px; }
+}

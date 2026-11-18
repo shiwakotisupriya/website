@@ -83,3 +83,9 @@ The Olist analysis leads the project section, followed by academic machine learn
 ## Concise homepage
 
 The homepage now leads with the introduction and two data projects. Professional roles and software project links are condensed into a background section; skills and education are grouped, with compact ACS membership and contact sections. One CV download remains in the hero. All detailed project pages remain available. Portrait markup, photo, orbit, and scene.js are unchanged.
+
+## Flagship project
+
+Olist is the primary project linked from the hero, with a larger featured card, verified dataset scope and delivery metrics, and a regional finding linked to the full case study. Academic machine learning remains a compact secondary project. No new outcome or deployment claims are added. The photo and orbital implementation are unchanged.
+
+Olist project repository: https://github.com/shiwakotisupriya/olist (provided by the owner). Linked from the flagship card and case study.
