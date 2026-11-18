@@ -1,0 +1,165 @@
+{
+  "dataset": "Olist historical Brazilian e-commerce data, 2016-2018",
+  "orders": 99441,
+  "delivered": 96478,
+  "eligible": 96470,
+  "excluded_missing_dates": 8,
+  "late": 6534,
+  "outcomes": {
+    "on_time": {
+      "eligible": 89936,
+      "reviewed": 89443,
+      "low_reviews": 8290,
+      "score_sum": 383735,
+      "low_review_rate": 0.09268472658564672,
+      "mean_review": 4.2902742528761335
+    },
+    "late": {
+      "eligible": 6534,
+      "reviewed": 6381,
+      "low_reviews": 3982,
+      "score_sum": 14490,
+      "low_review_rate": 0.6240401191035888,
+      "mean_review": 2.2708039492242595
+    }
+  },
+  "states": {
+    "AC": {
+      "eligible": 80,
+      "late": 3,
+      "late_rate": 0.0375
+    },
+    "AL": {
+      "eligible": 397,
+      "late": 85,
+      "late_rate": 0.2141057934508816
+    },
+    "AM": {
+      "eligible": 145,
+      "late": 4,
+      "late_rate": 0.027586206896551724
+    },
+    "AP": {
+      "eligible": 67,
+      "late": 2,
+      "late_rate": 0.029850746268656716
+    },
+    "BA": {
+      "eligible": 3256,
+      "late": 396,
+      "late_rate": 0.12162162162162163
+    },
+    "CE": {
+      "eligible": 1279,
+      "late": 176,
+      "late_rate": 0.1376075058639562
+    },
+    "DF": {
+      "eligible": 2080,
+      "late": 118,
+      "late_rate": 0.05673076923076923
+    },
+    "ES": {
+      "eligible": 1995,
+      "late": 214,
+      "late_rate": 0.10726817042606517
+    },
+    "GO": {
+      "eligible": 1957,
+      "late": 128,
+      "late_rate": 0.06540623403168115
+    },
+    "MA": {
+      "eligible": 717,
+      "late": 125,
+      "late_rate": 0.17433751743375175
+    },
+    "MG": {
+      "eligible": 11354,
+      "late": 519,
+      "late_rate": 0.04571076272679232
+    },
+    "MS": {
+      "eligible": 701,
+      "late": 68,
+      "late_rate": 0.09700427960057062
+    },
+    "MT": {
+      "eligible": 886,
+      "late": 53,
+      "late_rate": 0.05981941309255079
+    },
+    "PA": {
+      "eligible": 946,
+      "late": 106,
+      "late_rate": 0.11205073995771671
+    },
+    "PB": {
+      "eligible": 517,
+      "late": 54,
+      "late_rate": 0.10444874274661509
+    },
+    "PE": {
+      "eligible": 1593,
+      "late": 153,
+      "late_rate": 0.096045197740113
+    },
+    "PI": {
+      "eligible": 476,
+      "late": 66,
+      "late_rate": 0.13865546218487396
+    },
+    "PR": {
+      "eligible": 4923,
+      "late": 199,
+      "late_rate": 0.04042250660166565
+    },
+    "RJ": {
+      "eligible": 12350,
+      "late": 1495,
+      "late_rate": 0.12105263157894737
+    },
+    "RN": {
+      "eligible": 474,
+      "late": 44,
+      "late_rate": 0.09282700421940929
+    },
+    "RO": {
+      "eligible": 243,
+      "late": 7,
+      "late_rate": 0.02880658436213992
+    },
+    "RR": {
+      "eligible": 41,
+      "late": 5,
+      "late_rate": 0.12195121951219512
+    },
+    "RS": {
+      "eligible": 5344,
+      "late": 325,
+      "late_rate": 0.06081586826347305
+    },
+    "SC": {
+      "eligible": 3546,
+      "late": 291,
+      "late_rate": 0.08206429780033841
+    },
+    "SE": {
+      "eligible": 335,
+      "late": 51,
+      "late_rate": 0.15223880597014924
+    },
+    "SP": {
+      "eligible": 40494,
+      "late": 1820,
+      "late_rate": 0.044944930113103174
+    },
+    "TO": {
+      "eligible": 274,
+      "late": 27,
+      "late_rate": 0.09854014598540146
+    }
+  },
+  "late_rate": 0.06773090079817559,
+  "sp_rj_late_share": 0.507346189164371
+}

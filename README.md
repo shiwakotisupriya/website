@@ -34,7 +34,7 @@ Semantic landmarks, skip link, visible keyboard focus, native details elements, 
 
 ## Theme
 
-Midnight navy (#0B1120), dark slate cards and navigation (#151E2E), soft white headings (#F8FAFC), light grey body text (#CBD5E1), teal accents (#2DD4BF), and slate borders (#2A3649). Inter typography. Teal buttons use navy text. 3D accents match the palette; the ACS logo retains its brand colours.
+Charcoal background (#121214), surfaces (#1C1C21), soft white text (#ECECF1), violet accent (#8B7CF6), and golden highlights (#F5C451). This selected palette uses dark mode consistently. Colours are CSS variables and Three.js reads its accent from them. Violet buttons use charcoal text for contrast. The ACS logo retains its original colours.
 
 ## Motion
 
@@ -63,3 +63,23 @@ The portrait orbit uses matching front and rear WebGL layers clipped at the phot
 ## Mobile layout
 
 Keeps the desktop theme, 3D orbital portrait, photo assembly, project entrances, and ACS section. Phone layouts stack content for readability; tablets retain the two-column project composition. Navigation scrolls within short screens, controls have touch-sized targets, long skill labels sit above headings, and orbital layers are sized to stay within the page.
+
+## Public project stories
+
+Three standalone project-story pages present context, contributions, tools, and relevant skills based on the upgraded CV. They do not publish source code, datasets, client screenshots, or unverified results. Email links let visitors request a project discussion without promising repository access. Upload all three additional HTML pages with the site.
+
+## Additional academic and personal work
+
+A collection section summarises the user-confirmed smaller master's projects in statistics, Python, and machine learning, plus bachelor's academic and personal software development projects. No individual project names, datasets, or results are invented.
+
+## Presentation polish
+
+Cards show a concise summary, tools, and one project-story link. Full explanations and discussion links remain on project pages. Rotating card entrances and mouse tilt are visually replaced by a short one-time reveal and simple focus feedback. The portrait markup, photo asset, Three.js orbit, and hexagonal assembly implementation are unchanged. Labels, spacing, and readable text sizes are standardised.
+
+## Data evidence update
+
+The Olist analysis leads the project section, followed by academic machine learning and a separate supporting software section. Delivery and review figures were recomputed from original CSVs and reconciled to existing SQL exports. Only aggregate results and reproducibility scripts are included in evidence/. Upload olist-delivery-analysis.html, olist-chart.js, and evidence/ alongside the other site files. The breast cancer case study remains qualitative until the project notebook/results are supplied. The portrait markup and scene.js are unchanged.
+
+## Concise homepage
+
+The homepage now leads with the introduction and two data projects. Professional roles and software project links are condensed into a background section; skills and education are grouped, with compact ACS membership and contact sections. One CV download remains in the hero. All detailed project pages remain available. Portrait markup, photo, orbit, and scene.js are unchanged.

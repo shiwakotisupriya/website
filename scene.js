@@ -63,7 +63,8 @@ async function initialiseScenes() {
     camera.position.z = kind === 'orbit' ? 6.2 : 5.5;
     const group = new THREE.Group();
     scene.add(group);
-    const accent = 0x2dd4bf;
+    const palette = getComputedStyle(document.documentElement);
+    const accent = palette.getPropertyValue('--accent').trim();
     if (kind === 'orbit') {
       // A revolving cage of orbital rings surrounds the rounded portrait.
       for (let index = 0; index < 3; index++) {
@@ -98,7 +99,7 @@ async function initialiseScenes() {
         }
       }
       group.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(edges), new THREE.LineBasicMaterial({ color: accent, transparent: true, opacity: 0.32 })));
-      group.add(new THREE.Points(new THREE.BufferGeometry().setFromPoints(points), new THREE.PointsMaterial({ color: 0xf8fafc, size: 0.045, sizeAttenuation: true })));
+      group.add(new THREE.Points(new THREE.BufferGeometry().setFromPoints(points), new THREE.PointsMaterial({ color: palette.getPropertyValue('--ink').trim(), size: 0.045, sizeAttenuation: true })));
       const core = new THREE.Mesh(new THREE.IcosahedronGeometry(0.45, 0), new THREE.MeshBasicMaterial({ color: accent, wireframe: true, transparent: true, opacity: 0.6 }));
       group.add(core);
     }
@@ -306,3 +307,17 @@ if (portrait && portraitImage && hexLayer) {
   document.addEventListener('visibilitychange', () => { if (document.hidden) finishAssembly(); });
   motionButton?.addEventListener('click', () => { if (motionPaused) finishAssembly(); });
 }
+
+
+// Keep WebGL accents in sync when the operating system changes appearance.
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+  const palette = getComputedStyle(document.documentElement);
+  for (const item of scenes) {
+    item.scene.traverse(object => {
+      if (object.material?.color) {
+        object.material.color.set(palette.getPropertyValue(object.isPoints ? '--ink' : '--accent').trim());
+      }
+    });
+  }
+  wake();
+});
